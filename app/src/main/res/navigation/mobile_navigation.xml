@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_dashboard">
+
+    <fragment
+        android:id="@+id/navigation_dashboard"
+        android:name="com.prashant.weatherapp.ui.dashboard.DashboardFragment"
+        android:label="@string/title_dashboard"
+        tools:layout="@layout/fragment_dashboard" >
+        <action
+            android:id="@+id/action_navigation_dashboard_to_cityDetailFragment"
+            app:destination="@id/cityDetailFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.prashant.weatherapp.ui.addcity.AddCityFragment"
+        android:label="@string/title_add"
+        tools:layout="@layout/fragment_addcity" />
+
+    <fragment
+        android:id="@+id/navigation_notifications"
+        android:name="com.prashant.weatherapp.ui.help.HelpFragment"
+        android:label="@string/title_help"
+        tools:layout="@layout/fragment_help" />
+    <fragment
+        android:id="@+id/cityDetailFragment"
+        android:name="com.prashant.weatherapp.ui.citydetail.CityDetailFragment"
+        android:label="fragment_city_detail"
+        tools:layout="@layout/fragment_city_detail" />
+</navigation>
